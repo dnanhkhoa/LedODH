@@ -1,0 +1,49 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/getorders-navbar.nunjucks" %}
+
+<script>
+    GetOrders_SetNextPage('get_orders_selected.html');
+</script>
+
+<div class="container">
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Home Lighting</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+
+                    <div>Small Led <span class="badge">5</span></div>
+                    <div>Bedroom Led <span class="badge">10</span></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Bulb</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+
+                    <div>Small Led <span class="badge">5</span></div>
+                    <div>Bedroom Led <span class="badge">10</span></div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{%endblock %}
