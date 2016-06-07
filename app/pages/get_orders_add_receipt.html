@@ -1,0 +1,35 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/getorders-navbar.nunjucks" %}
+
+<script>
+    GetOrders_SetNextPage('get_orders_selected.html');
+</script>
+
+<script src="../assets/simple_treeview/simpletreemenu.js"></script>
+<link rel="stylesheet" href="../assets/simple_treeview/simpletree.css">
+
+<ul id="TreeMenuProducts" class="treeview">
+    <li>House-hold
+        <ul>
+            <li>Bedroom led</li>
+            <li>Lamp led</li>
+        </ul>
+    </li>
+
+    <li>Decoration
+        <ul>
+            <li>Mini led</li>
+            <li>Colorful led</li>
+        </ul>
+    </li>
+</ul>
+
+
+<script>
+    ddtreemenu.createTree("TreeMenuProducts", true);
+</script>
+
+{%endblock %}
