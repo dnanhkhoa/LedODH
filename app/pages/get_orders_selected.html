@@ -6,7 +6,47 @@
 
 <h1>Selected products</h1>
 <script>
-    GetOrders_SetNextPage('abc.html');
+    GetOrders_SetNextPage('get_orders.html');
 </script>
+
+<div>Customer: ABC</div>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Lamp112</td>
+        <td>Red lamp</td>
+        <td>120</td>
+        <td>Shortage: 50</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Lamp113</td>
+        <td>Blue lamp</td>
+        <td>100</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<div class="text-center">
+    <div class="btn-group">
+        <a href="#" class="btn btn-success" style="margin: 5px">Confirm</a>
+        <a href="#" class="btn btn-danger" style="margin: 5px">Cancel</a>
+    </div>
+</div>
 
 {%endblock %}
