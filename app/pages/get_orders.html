@@ -2,34 +2,82 @@
 
 {% block content %}
 
-{% include "partials/getorders-navbar.nunjucks" %}
+<h1>Get Order Receipt Management</h1>
 
-<script>
-    GetOrders_SetNextPage('get_orders_selected.html');
-</script>
+<a href="get_orders_add_receipt.html" class="btn btn-default">
+    <span class="glyphicon glyphicon-plus"></span>
+    Add
+</a>
 
-<script src="../assets/simple_treeview/simpletreemenu.js"></script>
-<link rel="stylesheet" href="../assets/simple_treeview/simpletree.css">
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>ID Receipt</th>
+            <th>Customer</th>
+            <th>Date created</th>
+            <th>Day received</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        </thead>
 
-<ul id="TreeMenuProducts" class="treeview">
-    <li>House-hold
-        <ul>
-            <li>Bedroom led</li>
-            <li>Lamp led</li>
-        </ul>
-    </li>
+        <tbody>
 
-    <li>Decoration
-        <ul>
-            <li>Mini led</li>
-            <li>Colorful led</li>
-        </ul>
-    </li>
-</ul>
+        <tr>
+            <td>001</td>
+            <td>Trader 1</td>
+            <td>12/3/16</td>
+            <td>13/3/16</td>
+            <td>7500000</td>
+            <td>
+                <div class="btn-group">
+                    <a href="get_orders_selected.html" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                    </a>
+
+                    <button type="button" class="btn btn-warning">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+
+                    <button type="button" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
 
 
-<script>
-    ddtreemenu.createTree("TreeMenuProducts", true);
-</script>
+            </td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>VnCompact</td>
+            <td>2/4/16</td>
+            <td>5/4/16</td>
+            <td>8200000</td>
+            <td>
+
+                <div class="btn-group">
+
+                    <a href="get_orders_selected.html" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                    </a>
+
+                    <button type="button" class="btn btn-warning">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+
+                    <button type="button" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+
+                </div>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
 
 {%endblock %}
