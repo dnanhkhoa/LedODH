@@ -1,0 +1,12 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/getorders-navbar.nunjucks" %}
+
+<h1>Selected products</h1>
+<script>
+    GetOrders_SetNextPage('abc.html');
+</script>
+
+{%endblock %}
