@@ -1,0 +1,161 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+
+<h2>Customer's Receipt Details</h2>
+
+<div>ID Receipt: 006</div>
+<div>Customer: VNCORP</div>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>ID Product</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Lamp112</td>
+        <td>Red lamp</td>
+        <td>120</td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                </button>
+                <button type="button" class="btn btn-bitbucket">
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                </button>
+            </div>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Lamp113</td>
+        <td>Blue lamp</td>
+        <td>100</td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                </button>
+                <button type="button" class="btn btn-bitbucket">
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                </button>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Lamp114</td>
+        <td>Yellow lamp</td>
+        <td>20</td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                </button>
+                <button type="button" class="btn btn-bitbucket">
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                </button>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Light009</td>
+        <td>Light small Led</td>
+        <td>10</td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                </button>
+                <button type="button" class="btn btn-bitbucket">
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                </button>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>Light102</td>
+        <td>Light big Led</td>
+        <td>120</td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                </button>
+                <button type="button" class="btn btn-bitbucket">
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                </button>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>Lig103</td>
+        <td>Light normal decorate One</td>
+        <td>50</td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                </button>
+                <button type="button" class="btn btn-bitbucket">
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                </button>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>Lig104</td>
+        <td>Light normal decorate Two</td>
+        <td>80</td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                </button>
+                <button type="button" class="btn btn-bitbucket">
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                </button>
+            </div>
+        </td>
+    </tr>
+
+
+
+    </tbody>
+</table>
+
+
+<div class="text-center">
+    <div class="btn-group">
+        <a href="#" class="btn btn-success" style="margin: 5px">Confirm</a>
+        <a href="export.html" class="btn btn-danger" style="margin: 5px">Back</a>
+    </div>
+</div>
+
+
+
+
+
+
+{%endblock %}

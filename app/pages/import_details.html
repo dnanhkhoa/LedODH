@@ -1,20 +1,18 @@
 {% extends "layout.nunjucks" %}
 {% block content %}
 
-<h1>Order details</h1>
+<h2>Distributor's Receipt Details</h2>
 
-<div>Distributor: ABC</div>
+<div>ID Receipt: 008</div>
+<div>Distributor: VNLED</div>
 
-<div>Date created: June 6th, 2016</div>
-
-<div>Date received: June 11th, 2016</div>
 
 <table class="table table-hover">
     <thead>
     <tr>
-        <th>Number</th>
+        <th>#</th>
         <th>ID Product</th>
-        <th>Name of Product</th>
+        <th>Name</th>
         <th>Quantity</th>
         <th>Price</th>
         <th>Status</th>
@@ -23,10 +21,10 @@
 
     <tbody>
     <tr>
-        <td>1</td>
+        <td>01</td>
         <td>Lamp XL</td>
         <td>X02</td>
-        <td>3</td>
+        <td>30</td>
         <td>300000</td>
         <td>
 
@@ -38,10 +36,10 @@
     </tr>
 
     <tr>
-        <td>2</td>
+        <td>02</td>
         <td>Decorator Mini Led</td>
         <td>K02</td>
-        <td>4</td>
+        <td>400</td>
         <td>400000</td>
         <td>
             <button type="button" class="btn btn-danger">
@@ -52,8 +50,96 @@
     </tr>
 
     <tr>
-        <td colspan="4">Total</td>
-        <td>700000</td>
+        <td>03</td>
+        <td>Lamp mini Deco</td>
+        <td>P02</td>
+        <td>20</td>
+        <td>1500000</td>
+        <td>
+
+            <button type="button" class="btn btn-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span>
+            </button>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>04</td>
+        <td>LIGHT Led</td>
+        <td>I06</td>
+        <td>40</td>
+        <td>100000</td>
+        <td>
+            <button type="button" class="btn btn-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span>
+            </button>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>05</td>
+        <td>Lamp BLUE</td>
+        <td>B01</td>
+        <td>200</td>
+        <td>40000</td>
+        <td>
+
+            <button type="button" class="btn btn-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span>
+            </button>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>06</td>
+        <td>Led One</td>
+        <td>O07</td>
+        <td>80</td>
+        <td>400000</td>
+        <td>
+            <button type="button" class="btn btn-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span>
+            </button>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>07</td>
+        <td>Lamp RED</td>
+        <td>R04</td>
+        <td>50</td>
+        <td>40000</td>
+        <td>
+
+            <button type="button" class="btn btn-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span>
+            </button>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>08</td>
+        <td>Kini Led SM</td>
+        <td>K07</td>
+        <td>800</td>
+        <td>50000</td>
+        <td>
+            <button type="button" class="btn btn-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span>
+            </button>
+
+        </td>
+    </tr>
+
+
+    <tr>
+        <td colspan="4" style="align-self: center">Total</td>
+        <td>87500000</td>
     </tr>
     </tbody>
 </table>
@@ -61,7 +147,7 @@
 <div class="text-center">
     <div class="btn-group">
         <a href="#" class="btn btn-success" style="margin: 5px">Confirm</a>
-        <a href="import.html" class="btn btn-default" style="margin: 5px">Back</a>
+        <a href="import.html" class="btn btn-danger" style="margin: 5px">Back</a>
     </div>
 </div>
 

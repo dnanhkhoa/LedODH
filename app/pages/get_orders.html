@@ -2,81 +2,224 @@
 
 {% block content %}
 
-<h1>Get Order Receipt Management</h1>
-
-<a href="get_orders_add_receipt.html" class="btn btn-default">
-    <span class="glyphicon glyphicon-plus"></span>
-    Add
-</a>
-
-<div class="container">
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>ID Receipt</th>
-            <th>Customer</th>
-            <th>Date created</th>
-            <th>Day received</th>
-            <th>Total</th>
-            <th></th>
-        </tr>
-        </thead>
-
-        <tbody>
-
-        <tr>
-            <td>001</td>
-            <td>Trader 1</td>
-            <td>12/3/16</td>
-            <td>13/3/16</td>
-            <td>7500000</td>
-            <td>
-                <div class="btn-group">
-                    <a href="get_orders_selected.html" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-info-sign"></span>
-                    </a>
-
-                    <button type="button" class="btn btn-warning">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </button>
-
-                    <button type="button" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </button>
-                </div>
 
 
-            </td>
-        </tr>
-        <tr>
-            <td>002</td>
-            <td>VnCompact</td>
-            <td>2/4/16</td>
-            <td>5/4/16</td>
-            <td>8200000</td>
-            <td>
 
-                <div class="btn-group">
+    <h2>Get Orders</h2>
+    <h3>Customers' Receipts Management</h3>
 
-                    <a href="get_orders_selected.html" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-info-sign"></span>
-                    </a>
+    <div class="form-group has-success has-feedback">
+        <a href="get_orders_add_receipt.html" class="btn btn-success">
+            <span class="glyphicon glyphicon-plus"></span>
+            Add
+        </a>
+        <div class="col-sm-4  pull-right">
+            <span class="glyphicon glyphicon-search"></span>
+            <input type="text" class="form-group-lg">
+        </div>
+    </div>
 
-                    <button type="button" class="btn btn-warning">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </button>
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>ID Receipt</th>
+                <th>Customer</th>
+                <th>Date created</th>
+                <th>Day exported Expectation</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+            </thead>
 
-                    <button type="button" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </button>
+            <tbody>
+            <tr>
+                <td>001</td>
+                <td>HaledCo</td>
+                <td>12/3/16</td>
+                <td>13/3/16</td>
+                <td>75000000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>FTel</td>
+                <td>7/4/16</td>
+                <td>7/4/16</td>
+                <td>67000000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>VnComp</td>
+                <td>8/4/16</td>
+                <td>9/4/16</td>
+                <td>82000000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Domestic</td>
+                <td>16/4/16</td>
+                <td>20/4/16</td>
+                <td>12000000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>ASAMLed</td>
+                <td>30/4/16</td>
+                <td>2/5/16</td>
+                <td>89500000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>OKET</td>
+                <td>7/5/16</td>
+                <td>9/5/16</td>
+                <td>59000000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td>VnCompact</td>
+                <td>12/5/16</td>
+                <td>13/5/16</td>
+                <td>82000000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td>ASAMLed</td>
+                <td>27/5/16</td>
+                <td>28/5/16</td>
+                <td>36000000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>009</td>
+                <td>FTel</td>
+                <td>1/6/16</td>
+                <td>1/6/16</td>
+                <td>53000000</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="get_orders_selected.html" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                        </a>
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
 
-                </div>
+        </table>
+    </div>
 
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+
+
 
 
 
