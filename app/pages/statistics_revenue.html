@@ -1,0 +1,32 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+<style>
+    div.revMenu
+    {
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+
+<h1>Revenue</h1>
+
+<div>
+    <a class="btn btn-default" href="statistics.html">Back</a>
+</div>
+
+<div class="row">
+    <div class="col-xs-2">
+        <a href="statistics_revenue_year.html">
+            <div class="revMenu" style="background-color:white; color:brown">
+                <div class="widget">
+                    <h3>Yearly</h3>
+                    <p>4000$</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
