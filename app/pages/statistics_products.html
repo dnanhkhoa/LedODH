@@ -1,0 +1,133 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+<style>
+    div.revMenu
+    {
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+
+<h1>Product statistics</h1>
+
+<div style="margin: 10px">
+    <a class="btn btn-default" href="statistics.html">Back</a>
+</div>
+
+<div class="row">
+    <div class="col col-sm-6">
+        <h2>Best sell products</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Avg day income</th>
+                <th>Avg month income</th>
+                <th>Avg year income</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>Led001</td>
+                <td>Lamp light</td>
+                <td>50$</td>
+                <td>1500$</td>
+                <td>18000$</td>
+            </tr>
+
+            <tr>
+                <td>01</td>
+                <td>Led002</td>
+                <td>Blue light - household</td>
+                <td>35$</td>
+                <td>1050$</td>
+                <td>12600$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col col-sm-6">
+        <h2>Inventory</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Inventory days</th>
+                <th>Avg month income</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>Led006</td>
+                <td>Cyan color-decoration</td>
+                <td>162</td>
+                <td>230$</td>
+            </tr>
+
+            <tr>
+                <td>02</td>
+                <td>Led004</td>
+                <td>Big spotlight</td>
+                <td>123</td>
+                <td>240$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col col-sm-6">
+        <h2>Out of stock</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity needed from customers</th>
+                <th>Corresspoding income</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>Led053</td>
+                <td>Small light bulb</td>
+                <td>98</td>
+                <td>2400$</td>
+            </tr>
+
+            <tr>
+                <td>02</td>
+                <td>Led046</td>
+                <td>Medium spotlight - red</td>
+                <td>65</td>
+                <td>2000$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

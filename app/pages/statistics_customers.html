@@ -1,0 +1,52 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+<style>
+    div.revMenu
+    {
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+
+<h1>Customer statistics</h1>
+
+<div style="margin: 10px">
+    <a class="btn btn-default" href="statistics.html">Back</a>
+</div>
+
+<div class="row">
+    <div class="col col-sm-6">
+        <h2>Familiar customers</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Income</th>
+                <th>Popular products</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>Quan Hung</td>
+                <td>94000$</td>
+                <td>Blue spot, small decoration</td>
+            </tr>
+
+            <tr>
+                <td>01</td>
+                <td>Hoang Tuan</td>
+                <td>85000$</td>
+                <td>Corn cob, led-wall</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

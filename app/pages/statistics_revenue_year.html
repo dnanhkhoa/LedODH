@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<script src="../assets/publicScripts/public.js"></script>
+
 <style>
     a.btnChart
     {
@@ -16,28 +18,63 @@
     }
 </style>
 
-<script>
-    function setChartPage(iframeID, url)
-    {
-        var ifr = document.getElementById(iframeID);
-        ifr.src = url;
-
-        if (url == "")  {
-            ifr.style.display = 'none';
-        }
-        else {
-            ifr.style.display = '';
-        }
-    }
-</script>
-
-
-
 <h1>Revenue yearly statistics</h1>
 
-<div>
+<div style="margin: 10px">
     <a class="btn btn-default" href="statistics_revenue.html">Back</a>
 </div>
+
+
+<div>
+    <h2>Basic statistics</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Year</th>
+            <th>Income</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>2013</td>
+            <td>12000</td>
+        </tr>
+
+        <tr>
+            <td>2014</td>
+            <td>16000</td>
+        </tr>
+
+        <tr>
+            <td>2015</td>
+            <td>15600</td>
+        </tr>
+
+        <tr>
+            <td>2016</td>
+            <td>18000</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div style="padding-left: 20px">
+        <h3>Chart</h3>
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_BasicChart', '')">
+            X
+        </a>
+
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_BasicChart', 'statistics_revenue_year_basic_linechart.html')">
+            <img src="..\assets\charts\line.png"/>
+        </a>
+
+        <iframe id="ifr_BasicChart" frameborder="0" style="width: 100%; height: 400px; display: none;">
+
+        </iframe>
+    </div>
+</div>
+
 
 <div>
     <h2>Top customers</h2>
@@ -72,21 +109,21 @@
     </table>
 
 
-    <h2>Charts</h2>
     <div style="padding-left: 20px">
+        <h3>Chart</h3>
         <a class="btn btn-default btnChart" onclick="setChartPage('ifr_CustomerChart', '')">
             X
         </a>
 
-        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_CustomerChart', 'statistics_revenue_year_chart.html')">
-            <img src="..\assets\charts\column_chart.png"/>
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_CustomerChart', 'statistics_revenue_year_customer_columnchart.html')">
+            <img src="../assets/charts/column.png"/>
         </a>
 
-        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_CustomerChart', 'statistics_revenue_year_chart.html')">
-            <img src="..\assets\charts\pie_chart.png"/>
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_CustomerChart', 'statistics_revenue_year_customer_donutchart.html')">
+            <img src="../assets/charts/donut.png"/>
         </a>
 
-        <iframe id="ifr_CustomerChart" style="width: 100%; display: none; height: 400px;">
+        <iframe id="ifr_CustomerChart" style="width: 100%; display: none; height: 450px;">
 
         </iframe>
     </div>
@@ -129,21 +166,21 @@
         </tbody>
     </table>
 
-    <h2>Charts</h2>
     <div style="padding-left: 20px">
+        <h3>Chart</h3>
         <a class="btn btn-default btnChart" onclick="setChartPage('ifr_ProductChart', '')">
             X
         </a>
 
-        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_ProductChart', 'statistics_revenue_year_chart.html')">
-            <img src="..\assets\charts\column_chart.png"/>
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_ProductChart', 'statistics_revenue_year_customer_columnchart.html')">
+            <img src="..\assets\charts\line.png"/>
         </a>
 
-        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_ProductChart', 'statistics_revenue_year_chart.html')">
-            <img src="..\assets\charts\pie_chart.png"/>
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_ProductChart', 'statistics_revenue_year_customer_donutchart.html')">
+            <img src="..\assets\charts\donut.png"/>
         </a>
 
-        <iframe id="ifr_ProductChart" style="width: 100%; display: none;">
+        <iframe id="ifr_ProductChart" style="width: 100%; display: none; height: 450px;">
 
         </iframe>
     </div>
