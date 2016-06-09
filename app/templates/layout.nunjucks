@@ -561,5 +561,6 @@ desired effect
 <!-- ./wrapper -->
 
 {% include "partials/script.nunjucks" %}
+{% block external_scripts %}{% endblock %}
 </body>
 </html>
