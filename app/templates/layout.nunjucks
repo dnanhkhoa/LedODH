@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html>
-{% include "partials/head.nunjucks" %}
-<!--
-BODY TAG OPTIONS:
-=================
-Apply one or more of the following classes to get the
-desired effect
-|---------------------------------------------------------|
-| SKINS         | skin-blue                               |
-|               | skin-black                              |
-|               | skin-purple                             |
-|               | skin-yellow                             |
-|               | skin-red                                |
-|               | skin-green                              |
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | fixed                                   |
-|               | layout-boxed                            |
-|               | layout-top-nav                          |
-|               | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
--->
-<body class="hold-transition skin-blue sidebar-mini">
+{% extends "mini-layout.nunjucks" %}
+
+{% block body_class %} class="hold-transition skin-blue sidebar-mini"{% endblock %}
+
+{% block body_content %}
 <!-- Site wrapper -->
 <div class="wrapper">
 
@@ -559,7 +540,4 @@ desired effect
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
-{% include "partials/script.nunjucks" %}
-</body>
-</html>
+{% endblock %}
