@@ -1,0 +1,22 @@
+{% from "partials/components.nunjucks" import crud_button_group %}
+<div id="main-customers-receipts" class="inline-box">
+	<div class="row">
+
+	</div>
+	<!-- /.row -->
+	<div class="row table-responsive">
+	  <div class="col-md-12">
+	    <table class="table table-bordered table-hover">
+	      <tr>
+	        <th>Name</th>
+	        <th>Phone</th>
+	        <th>Email</th>
+	        <th>Action</th>
+	      </tr>
+	    </table>
+	  </div>
+	</div>
+	<!-- /.row -->
+	{% from "partials/components.nunjucks" import pagination %}
+	{{ pagination(3) }}
+</div><!-- /.inline-box -->

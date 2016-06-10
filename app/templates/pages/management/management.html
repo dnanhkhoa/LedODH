@@ -1,0 +1,16 @@
+<div class="nav-tabs-custom">
+	<!-- Tabs within a box -->
+	<ul class="nav nav-tabs">
+	  <li class="active"><a href="#customers-management" data-toggle="tab">Customers</a></li>
+	  <li><a href="#products-management" data-toggle="tab">Products</a></li>
+	  <li><a href="#distributors-management" data-toggle="tab">Distributors</a></li>
+	  <li><a href="#human-management" data-toggle="tab">Human</a></li>
+	</ul>
+  <div class="tab-content">
+    <div class="chart tab-pane active" id="customers-management">{% include "pages/management/customers-management.html" %}</div>
+    <div class="chart tab-pane" id="products-management">{% include "pages/management/products-management.html" %}</div>
+    <div class="chart tab-pane" id="distributors-management">{% include "pages/management/distributors-management.html" %}</div>
+    <div class="chart tab-pane" id="human-management">{% include "pages/management/human-management.html" %}</div>
+  </div>
+</div>
+<!-- /.nav-tabs-custom -->

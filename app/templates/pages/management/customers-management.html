@@ -1,0 +1,41 @@
+{% from "partials/components.nunjucks" import crud_button_group %}
+<div id="main-customers-management" class="inline-box">
+	<div class="row margin-bottom-10px">
+		<div class="col-md-12 clearfix">
+	    <div class="has-feedback pull-right">
+	      <input type="text" class="form-control input-sm" placeholder="Search">
+	      <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	    </div>
+    </div>
+	</div>
+	<!-- /.row -->
+	<div class="row table-responsive">
+	  <div class="col-md-12">
+	    <table class="table table-bordered table-hover">
+	      <tr>
+	        <th>Name</th>
+	        <th>Store name</th>
+	        <th>Phone</th>
+	        <th>Email</th>
+	        <th>Address</th>
+	        <th>Other</th>
+	        <th>Actions</th>
+	      </tr>
+        <tr>
+            <td>Ronald A. Stephens</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+            {{ crud_button_group('view-customers-management', 'edit-customers-management') }}
+            </td>
+          </tr>
+	    </table>
+	  </div>
+	</div>
+	<!-- /.row -->
+	{% from "partials/components.nunjucks" import pagination %}
+	{{ pagination(3) }}
+</div><!-- /.inline-box -->

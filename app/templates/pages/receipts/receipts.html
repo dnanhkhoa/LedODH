@@ -1,0 +1,12 @@
+<div class="nav-tabs-custom">
+	<!-- Tabs within a box -->
+	<ul class="nav nav-tabs">
+	  <li class="active"><a href="#customers-receipts" data-toggle="tab">Customers</a></li>
+	  <li><a href="#distributors-receipts" data-toggle="tab">Distributors</a></li>
+	</ul>
+  <div class="tab-content">
+    <div class="chart tab-pane active" id="customers-receipts">{% include "pages/receipts/customers-receipts.html" %}</div>
+    <div class="chart tab-pane" id="distributors-receipts">{% include "pages/receipts/distributors-receipts.html" %}</div>
+  </div>
+</div>
+<!-- /.nav-tabs-custom -->
