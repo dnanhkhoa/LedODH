@@ -1,1 +1,60 @@
-3
+{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+
+{% include "pages/management/products-management-add.html" %}
+{% include "pages/management/products-management-edit.html" %}
+{% include "pages/management/products-management-view.html" %}
+
+<div id="main-distributors-management" class="inline-box">
+    {{ add_search_button('add-products-management') }}
+    <!-- /.row -->
+    <div class="row table-responsive">
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Source</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+
+                <tr>
+                    <td>01</td>
+                    <td>bulb_01</td>
+                    <td>Big Bulb 18W</td>
+                    <td>ABC company</td>
+                    <td>2.5$</td>
+                    <td>
+                        {{ crud_button_group('view-products-management', 'edit-products-management') }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>02</td>
+                    <td>bulb_02</td>
+                    <td>Small Bulb 12W - red</td>
+                    <td>DEF company</td>
+                    <td>1$</td>
+                    <td>
+                        {{ crud_button_group('view-products-management', 'edit-products-management') }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>03</td>
+                    <td>deco_01</td>
+                    <td>Small Decoration - blue</td>
+                    <td>GHI company</td>
+                    <td>0.2$</td>
+                    <td>
+                        {{ crud_button_group('view-products-management', 'edit-products-management') }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- /.row -->
+    {% from "partials/components.nunjucks" import pagination %}
+    {{ pagination(3) }}
+</div><!-- /.inline-box -->
