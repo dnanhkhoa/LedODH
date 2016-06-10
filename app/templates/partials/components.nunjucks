@@ -67,3 +67,33 @@
   <li><a href="#">&raquo;</a></li>
 </ul>
 {% endmacro %}
+
+{% macro save_back_crud_button_group(main_view_id) %}
+<div class="row">
+  <div class="col-md-12 clearfix">
+    <div class="btn-group btn-group-lg pull-right">
+      <a href="#" class="btn btn-success inline-box-button" data-view-id="{{ main_view_id }}">Save</a>
+      <a href="#" class="btn btn-default inline-box-button" data-view-id="{{ main_view_id }}">Back</a>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro back_crud_button_group(main_view_id) %}
+<div class="row">
+  <div class="col-md-12 clearfix">
+    <div class="btn-group btn-group-lg pull-right">
+      <a href="#" class="btn btn-default inline-box-button" data-view-id="{{ main_view_id }}">Back</a>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro input_form(label, default_value) %}
+<div class="form-group">
+  <label class="col-md-3 control-label">{{ label | safe }}</label>
+  <div class="col-md-9">
+    <input type="text" class="form-control" placeholder="{{ label | safe }}" value="{{ default_value | safe }}">
+  </div>
+</div>
+{% endmacro %}

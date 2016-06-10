@@ -1,0 +1,18 @@
+{% from "partials/components.nunjucks" import save_back_crud_button_group, back_crud_button_group, input_form %}
+<div id="add-customers-management" class="inline-box hidden">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Add customers</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<form class="form-horizontal">
+
+	      {{ input_form('User', '') }}
+
+	    </form>
+    </div>
+	</div>
+	{{ save_back_crud_button_group('main-customers-management') }}
+</div>
