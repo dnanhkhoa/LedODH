@@ -46,6 +46,18 @@
 </div>
 {% endmacro %}
 
+{% macro add_search_button(view_add_id) %}
+<div class="row margin-bottom-10px">
+  <div class="col-md-12 clearfix">
+    <a href="#" class="btn btn-success inline-box-button" data-view-id="{{ view_add_id | safe }}"><span class="glyphicon glyphicon-plus"></span></a>
+    <div class="has-feedback pull-right">
+      <input type="text" class="form-control input-sm" placeholder="Search">
+      <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
 {% macro pagination(num_page = 3) %}
 <ul class="pagination pagination-sm no-margin pull-right">
   <li><a href="#">&laquo;</a></li>
