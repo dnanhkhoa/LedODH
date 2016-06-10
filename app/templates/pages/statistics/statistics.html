@@ -1,6 +1,7 @@
 {% include "pages/statistics/statistics_revenue.html" %}
 {% include "pages/statistics/statistics_products.html" %}
 {% include "pages/statistics/statistics_customers.html" %}
+{% include "pages/statistics/statistics_prediction.html" %}
 
 <div id="main-statistics" class="box box-success inline-box">
 	<div class="box-header">
@@ -69,12 +70,32 @@
 							</div>
 							<div class="box-footer no-padding">
 								<ul class="nav nav-stacked">
-									<li>Familiar customers <span class="pull-right badge bg-aqua">4</span></li>
+									<li>Close customers <span class="pull-right badge bg-aqua">2</span></li>
 								</ul>
 							</div>
 						</div>
 					</a>
 				</div>
+
+                <div class="col-md-3">
+                    <a href="#" class="inline-box-button" data-view-id="statistics_prediction">
+                        <div class="box box-widget widget-user-2">
+                            <!-- Add the bg color to the header using any of the bg-* classes -->
+                            <div class="widget-user-header bg-teal">
+                                <div class="widget-user-image">
+                                    <img class="img-rounded" src="../assets/publicImgs/predict.jpg" alt="User Avatar">
+                                </div>
+                                <!-- /.widget-user-image -->
+                                <h3>Prediction</h3>
+                            </div>
+                            <div class="box-footer no-padding">
+                                <ul class="nav nav-stacked">
+                                    <li>Product should buy <span class="pull-right badge bg-aqua">Bulb led 15W</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
 				<!-- Code here -->
 			</div>

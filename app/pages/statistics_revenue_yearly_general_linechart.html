@@ -1,0 +1,57 @@
+<script src="../assets/publicScripts/googlechart_loader.js"></script>
+<script src="../assets/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+
+<div class="row">
+    <div class="col-md-6">
+        <script type="text/javascript">
+            //google.charts.load('current', {'packages':['corechart']});
+            google.charts.load("visualization", "1", {packages:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Year', 'Sales', 'Expenses'],
+                    ['2013',  12000, 1890],
+                    ['2014',  16000, 2500],
+                    ['2015',  15600, 2800],
+                    ['2016',  18000, 4300]
+                ]);
+
+                var options = {
+                    title: 'Sales',
+                    animation: {
+                        duration: 1000,
+                        easing: 'out',
+                        startup: true
+                    },
+                    legend: { position: 'bottom' },
+                    vAxis: {title: 'Sales ($)'},
+                    hAxis: {title: 'Years'}
+                };
+
+                var options2 = jQuery.extend(true, {}, options);
+                options2.animation.duration = 0;
+
+
+                var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+
+                function resizeHandler () {
+                    chart.draw(data, options2);
+                }
+
+
+                if (window.addEventListener) {
+                    window.addEventListener('resize', resizeHandler, false);
+                }
+                else if (window.attachEvent) {
+                    window.attachEvent('onresize', resizeHandler);
+                }
+
+                chart.draw(data, options);
+            }
+        </script>
+    </div>
+</div>
+
+<div id="chart_div" style="max-width: 600px;"></div>
