@@ -1,4 +1,9 @@
 {% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+
+{% include "pages/management/customers-management-add.html" %}
+{% include "pages/management/customers-management-edit.html" %}
+{% include "pages/management/customers-management-view.html" %}
+
 <div id="main-customers-management" class="inline-box">
 	{{ add_search_button('add-customers-management') }}
 	<!-- /.row -->
