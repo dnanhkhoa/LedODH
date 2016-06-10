@@ -1,0 +1,13 @@
+data.json
+index.html
+login.html
+dashboard.html
+** mini-layout.nunjucks
+layout.nunjucks
+
+warehouse.html
+receipts.html
+
+Done management folder
+
+

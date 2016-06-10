@@ -1,11 +1,11 @@
-{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+{% import "partials/components.nunjucks" as components %}
 
 {% include "pages/management/distributors-management-add.html" %}
 {% include "pages/management/distributors-management-edit.html" %}
 {% include "pages/management/distributors-management-view.html" %}
 
 <div id="main-distributors-management" class="inline-box">
-    {{ add_search_button('add-distributors-management') }}
+    {{ add_search_button('add-distributors-management', 'main-distributors-management') }}
     <!-- /.row -->
     <div class="row table-responsive">
         <div class="col-md-12">
@@ -16,45 +16,45 @@
                     <th>Address</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Note</th>
                     <th>Actions</th>
                 </tr>
-
                 <tr>
                     <td>01</td>
                     <td>Tuan</td>
                     <td>15 Nguyen Van Cu st, District 5</td>
-                    <td>tuan@mail.com</td>
+                    <td>tuan@gmail.com</td>
                     <td>090333222</td>
+                    <td></td>
                     <td>
-                        {{ crud_button_group('view-distributors-management', 'edit-distributors-management') }}
+                    {{ crud_button_group('view-distributors-management', 'edit-distributors-management', 'main-distributors-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>02</td>
                     <td>Long</td>
                     <td>22 Le Duan st, District 1</td>
-                    <td>long@mail.com</td>
+                    <td>long@gmail.com</td>
                     <td>0939669220</td>
+                    <td></td>
                     <td>
-                        {{ crud_button_group('view-distributors-management', 'edit-distributors-management') }}
+                    {{ crud_button_group('view-distributors-management', 'edit-distributors-management', 'main-distributors-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>03</td>
                     <td>Khoa</td>
-                    <td>22 No Name st, District unknown</td>
-                    <td>khoa@mail.com</td>
+                    <td>22 Ly Thuong Kiet st, District 10</td>
+                    <td>khoa@gmail.com</td>
                     <td>0122994876</td>
+                    <td></td>
                     <td>
-                        {{ crud_button_group('view-distributors-management', 'edit-distributors-management') }}
+                    {{ crud_button_group('view-distributors-management', 'edit-distributors-management', 'main-distributors-management') }}
                     </td>
                 </tr>
             </table>
         </div>
     </div>
     <!-- /.row -->
-    {% from "partials/components.nunjucks" import pagination %}
     {{ pagination(3) }}
 </div><!-- /.inline-box -->

@@ -1,8 +1,7 @@
-{% from "partials/components.nunjucks" import save_back_crud_button_group, back_crud_button_group, input_form %}
 <div id="add-products-management" class="inline-box hidden">
     <div class="row">
         <div class="col-md-12">
-            <h3>Add human</h3>
+            <h3>Add product</h3>
         </div>
     </div>
     <div class="row">
@@ -13,8 +12,9 @@
                 {{ input_form('Source', '') }}
                 {{ input_form('Price', '') }}
                 {{ input_form('Quantity', '') }}
+                {{ input_form('Note', '') }}
             </form>
         </div>
     </div>
-    {{ save_back_crud_button_group('main-products-management') }}
+    {{ action_crud_button_group('main-products-management', 'add-products-management') }}
 </div>

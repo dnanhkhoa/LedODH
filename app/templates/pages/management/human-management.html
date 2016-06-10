@@ -1,11 +1,11 @@
-{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+{% import "partials/components.nunjucks" as components %}
 
 {% include "pages/management/human-management-add.html" %}
 {% include "pages/management/human-management-edit.html" %}
 {% include "pages/management/human-management-view.html" %}
 
 <div id="main-human-management" class="inline-box">
-    {{ add_search_button('add-human-management') }}
+    {{ add_search_button('add-human-management', 'main-human-management') }}
     <!-- /.row -->
     <div class="row table-responsive">
         <div class="col-md-12">
@@ -20,7 +20,6 @@
                     <th>Note</th>
                     <th>Actions</th>
                 </tr>
-
                 <tr>
                     <td>01</td>
                     <td>Man01</td>
@@ -30,10 +29,9 @@
                     <td>Admin</td>
                     <td></td>
                     <td>
-                        {{ crud_button_group('view-human-management', 'edit-human-management') }}
+                    {{ crud_button_group('view-human-management', 'edit-human-management', 'main-human-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>02</td>
                     <td>Accountant01</td>
@@ -43,65 +41,60 @@
                     <td>Statistics</td>
                     <td></td>
                     <td>
-                        {{ crud_button_group('view-human-management', 'edit-human-management') }}
+                    {{ crud_button_group('view-human-management', 'edit-human-management', 'main-human-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>03</td>
                     <td>WarehouseMan01</td>
                     <td>Pham Van Hai</td>
-                    <td>014593846754</td>
+                    <td>01459384674</td>
                     <td>8 Le Hong Phong st, District 5</td>
-                    <td>Import, export</td>
+                    <td>Import, Export</td>
                     <td></td>
                     <td>
-                        {{ crud_button_group('view-human-management', 'edit-human-management') }}
+                    {{ crud_button_group('view-human-management', 'edit-human-management', 'main-human-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>05</td>
                     <td>BankMan01</td>
                     <td>Le Minh Thi</td>
                     <td>012224444</td>
                     <td>198/75 Cach Mang Thang Tam st, District 1</td>
-                    <td>none</td>
+                    <td>None</td>
                     <td></td>
                     <td>
-                        {{ crud_button_group('view-human-management', 'edit-human-management') }}
+                    {{ crud_button_group('view-human-management', 'edit-human-management', 'main-human-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>06</td>
                     <td>Shipper01</td>
                     <td>Nguyen Van Tung</td>
                     <td>01443984238</td>
                     <td>44/68 Nguyen Thi Minh Khai st, District 1</td>
-                    <td>none</td>
+                    <td>None</td>
                     <td></td>
                     <td>
-                        {{ crud_button_group('view-human-management', 'edit-human-management') }}
+                    {{ crud_button_group('view-human-management', 'edit-human-management', 'main-human-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>07</td>
                     <td>Shipper02</td>
                     <td>Duong Anh Minh</td>
                     <td>098772776</td>
                     <td>221 Nguyen Thi Minh Khai st, District Binh Thanh</td>
-                    <td>none</td>
+                    <td>None</td>
                     <td></td>
                     <td>
-                        {{ crud_button_group('view-human-management', 'edit-human-management') }}
+                    {{ crud_button_group('view-human-management', 'edit-human-management', 'main-human-management') }}
                     </td>
                 </tr>
             </table>
         </div>
     </div>
     <!-- /.row -->
-    {% from "partials/components.nunjucks" import pagination %}
     {{ pagination(3) }}
 </div><!-- /.inline-box -->

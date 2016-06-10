@@ -1,0 +1,108 @@
+<div id="add-distributors-receipts" class="inline-box hidden">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Order</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 clearfix">
+			<label class="pull-right">Choose distributors</label>
+		</div>
+		<div class="col-md-9">
+			<div class="form-group">
+		    	<select class="form-control select2" multiple data-placeholder="Choose distributors" style="width: 100%;">
+		          <option selected="selected">Distributor A</option>
+		          <option selected="selected">Distributor B</option>
+		          <option>Distributor C</option>
+		          <option>Distributor D</option>
+		        </select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<form class="form-horizontal">
+				<div class="form-group">
+				  <label class="col-md-3 control-label">Delivery date</label>
+	                <div class="col-md-9">
+	                  <input type="text" class="form-control date-picker" placeholder="Delivery date">
+	                </div>
+                </div>
+				{{ input_form('Note', '') }}
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+		  		<label >Choose product to add to list</label>
+		    	<select class="form-control select2" data-placeholder="Choose product" style="width: 100%;">
+		    	  <option>Led A0</option>
+		          <option>Led A5</option>
+		          <option>Led B0</option>
+		          <option>Led C</option>
+		          <option>Led D</option>
+		        </select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		    <table class="table table-bordered table-hover" id="customers-receipts-product-table">
+		    	<tr>
+		    		<th>Product name</th>
+		    		<th>Company</th>
+		    		<th>Quantity</th>
+		    		<th>In stock</th>
+		    		<th>Orders</th>
+		    		<th>Actions</th>
+		    	</tr>
+		    	<tr>
+		    		<td>Led A0</td>
+		    		<td>Distributor A</td>
+		    		<td><span data-toggle="popover">100</span></td>
+		    		<td>163</td>
+		    		<td>3 orders</td>
+		    		<td>
+		    			<div class="btn-group btn-group-sm">
+		    				<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+		    			</div>
+		    		</td>
+		    	</tr>
+		    	<tr>
+		    		<td>Led A5</td>
+		    		<td>Distributor B</td>
+		    		<td><span data-toggle="popover">100</span></td>
+		    		<td>123</td>
+		    		<td>6 orders</td>
+		    		<td>
+		    			<div class="btn-group btn-group-sm">
+		    				<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+		    			</div>
+		    		</td>
+		    	</tr>
+		    	<tr>
+		    		<td>Led B0</td>
+		    		<td>Distributor B</td>
+		    		<td><span data-toggle="popover">400</span></td>
+		    		<td>122</td>
+		    		<td>1 orders</td>
+		    		<td>
+		    			<div class="btn-group btn-group-sm">
+		    				<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+		    			</div>
+		    		</td>
+		    	</tr>
+		    </table>
+		</div>
+	</div>
+	<div class="row">
+	  <div class="col-md-12 clearfix">
+	    <div class="btn-group btn-group-lg pull-right">
+			<a href="#" class="btn btn-success inline-box-button" data-view-id="main-customers-receipts" data-ref-id="add-customers-receipts">Send mail</a>
+	      	<a href="#" class="btn btn-warning inline-box-button" data-view-id="main-customers-receipts" data-ref-id="add-customers-receipts">Save</a>
+	      	<a href="#" class="btn btn-default inline-box-button" data-view-id="main-customers-receipts" data-ref-id="add-customers-receipts">Back</a>
+	    </div>
+	  </div>
+	</div>
+</div>

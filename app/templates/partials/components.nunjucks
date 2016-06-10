@@ -38,18 +38,10 @@
 </div>
 {% endmacro %}
 
-{% macro crud_button_group(view_info_id, view_edit_id) %}
-<div class="btn-group btn-group-sm">
-  <a href="#" class="btn btn-primary inline-box-button" data-view-id="{{ view_info_id | safe }}"><span class="glyphicon glyphicon-info-sign"></span></a>
-  <a href="#" class="btn btn-warning inline-box-button" data-view-id="{{ view_edit_id | safe }}"><span class="glyphicon glyphicon-pencil"></span></a>
-  <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
-</div>
-{% endmacro %}
-
-{% macro add_search_button(view_add_id) %}
+{% macro add_search_button(view_add_id, ref_id) %}
 <div class="row margin-bottom-10px">
   <div class="col-md-12 clearfix">
-    <a href="#" class="btn btn-success inline-box-button" data-view-id="{{ view_add_id | safe }}"><span class="glyphicon glyphicon-plus"></span></a>
+    <a href="#" class="btn btn-success inline-box-button" data-view-id="{{ view_add_id | safe }}" data-ref-id="{{ ref_id | safe }}"><span class="glyphicon glyphicon-plus"></span></a>
     <div class="has-feedback pull-right">
       <input type="text" class="form-control input-sm" placeholder="Search">
       <span class="glyphicon glyphicon-search form-control-feedback"></span>
@@ -68,32 +60,38 @@
 </ul>
 {% endmacro %}
 
-{% macro save_back_crud_button_group(main_view_id) %}
+{% macro crud_button_group(view_info_id, view_edit_id, ref_id, hide_view = false, hide_edit = false, hide_delete = false) %}
+<div class="btn-group btn-group-sm">
+  {% if hide_view == false %}
+  <a href="#" class="btn btn-primary inline-box-button" data-view-id="{{ view_info_id | safe }}" data-ref-id="{{ ref_id | safe }}"><span class="glyphicon glyphicon-info-sign"></span></a>
+  {% endif %}
+  {% if hide_edit == false %}
+  <a href="#" class="btn btn-warning inline-box-button" data-view-id="{{ view_edit_id | safe }}" data-ref-id="{{ ref_id | safe }}"><span class="glyphicon glyphicon-pencil"></span></a>
+  {% endif %}
+  {% if hide_delete == false %}
+  <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro action_crud_button_group(main_view_id, ref_id, hide_save = false) %}
 <div class="row">
   <div class="col-md-12 clearfix">
     <div class="btn-group btn-group-lg pull-right">
-      <a href="#" class="btn btn-success inline-box-button" data-view-id="{{ main_view_id | safe }}">Save</a>
-      <a href="#" class="btn btn-default inline-box-button" data-view-id="{{ main_view_id | safe }}">Back</a>
+      {% if hide_save == false %}
+      <a href="#" class="btn btn-success inline-box-button" data-view-id="{{ main_view_id | safe }}" data-ref-id="{{ ref_id | safe }}">Save</a>
+      {% endif %}
+      <a href="#" class="btn btn-default inline-box-button" data-view-id="{{ main_view_id | safe }}" data-ref-id="{{ ref_id | safe }}">Back</a>
     </div>
   </div>
 </div>
 {% endmacro %}
 
-{% macro back_crud_button_group(main_view_id) %}
-<div class="row">
-  <div class="col-md-12 clearfix">
-    <div class="btn-group btn-group-lg pull-right">
-      <a href="#" class="btn btn-default inline-box-button" data-view-id="{{ main_view_id | safe }}">Back</a>
-    </div>
-  </div>
-</div>
-{% endmacro %}
-
-{% macro input_form(label, default_value) %}
-<div class="form-group">
+{% macro input_form(label, default_value, disabled, class) %}
+<div class="form-group {{ class | safe }}">
   <label class="col-md-3 control-label">{{ label | safe }}</label>
   <div class="col-md-9">
-    <input type="text" class="form-control" placeholder="{{ label | safe }}" value="{{ default_value | safe }}">
+    <input type="text" class="form-control" placeholder="{{ label | safe }}" value="{{ default_value | safe }}" {% if disabled == true %}disabled{% endif %}>
   </div>
 </div>
 {% endmacro %}

@@ -1,8 +1,7 @@
-{% from "partials/components.nunjucks" import save_back_crud_button_group, back_crud_button_group, input_form %}
 <div id="add-human-management" class="inline-box hidden">
     <div class="row">
         <div class="col-md-12">
-            <h3>Add human</h3>
+            <h3>Add user</h3>
         </div>
     </div>
     <div class="row">
@@ -10,6 +9,7 @@
             <form class="form-horizontal">
                 {{ input_form('ID', '') }}
                 {{ input_form('Name', '') }}
+                {{ input_form('Password', '') }}
                 {{ input_form('Phone', '') }}
                 {{ input_form('Address', '') }}
                 {{ input_form('Role', '') }}
@@ -17,5 +17,5 @@
             </form>
         </div>
     </div>
-    {{ save_back_crud_button_group('main-human-management') }}
+    {{ action_crud_button_group('main-human-management', 'add-human-management') }}
 </div>

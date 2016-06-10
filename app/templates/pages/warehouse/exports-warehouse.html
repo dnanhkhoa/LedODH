@@ -1,10 +1,10 @@
-{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+{% import "partials/components.nunjucks" as components %}
 
 {% include "pages/warehouse/exports-warehouse-add.html" %}
 {% include "pages/warehouse/exports-warehouse-edit.html" %}
 {% include "pages/warehouse/exports-warehouse-view.html" %}
 
-<div id="main-distributors-management" class="inline-box">
+<div id="main-exports-warehouse" class="inline-box">
     {{ add_search_button('add-products-management') }}
     <!-- /.row -->
     <div class="row table-responsive">

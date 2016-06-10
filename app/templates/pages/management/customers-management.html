@@ -1,11 +1,11 @@
-{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+{% import "partials/components.nunjucks" as components %}
 
 {% include "pages/management/customers-management-add.html" %}
 {% include "pages/management/customers-management-edit.html" %}
 {% include "pages/management/customers-management-view.html" %}
 
 <div id="main-customers-management" class="inline-box">
-	{{ add_search_button('add-customers-management') }}
+	{{ add_search_button('add-customers-management', 'main-customers-management') }}
 	<!-- /.row -->
 	<div class="row table-responsive">
 	  <div class="col-md-12">
@@ -25,41 +25,40 @@
 				<td>Hoang</td>
 				<td>Hoang Pro</td>
 				<td>0122555666</td>
-				<td>hoang@mail.com</td>
+				<td>hoangpro@gmail.com</td>
 				<td>222 Dien Bien Phu st, District 10</td>
 				<td></td>
 				<td>
-				{{ crud_button_group('view-customers-management', 'edit-customers-management') }}
+				{{ crud_button_group('view-customers-management', 'edit-customers-management', 'main-customers-management') }}
 				</td>
 			</tr>
 			<tr>
 				<td>02</td>
 				<td>Xuan Vy</td>
-				<td>Vy led shop</td>
+				<td>Vy LED Shop</td>
 				<td>09079711222</td>
-				<td>vy@mail.com</td>
+				<td>xuanvy@gmail.com</td>
 				<td>56 An Duong Vuong st, District 5</td>
 				<td></td>
 				<td>
-					{{ crud_button_group('view-customers-management', 'edit-customers-management') }}
+				{{ crud_button_group('view-customers-management', 'edit-customers-management', 'main-customers-management') }}
 				</td>
 			</tr>
 			<tr>
 				<td>03</td>
 				<td>An</td>
-				<td>Thien An light shop</td>
+				<td>Thien An Light Shop</td>
 				<td>0974409287</td>
-				<td>an@mail.com</td>
+				<td>thienan@gmail.com</td>
 				<td>222 Tran Phu st, District 4</td>
 				<td></td>
 				<td>
-					{{ crud_button_group('view-customers-management', 'edit-customers-management') }}
+				{{ crud_button_group('view-customers-management', 'edit-customers-management', 'main-customers-management') }}
 				</td>
 			</tr>
 	    </table>
 	  </div>
 	</div>
 	<!-- /.row -->
-	{% from "partials/components.nunjucks" import pagination %}
 	{{ pagination(3) }}
 </div><!-- /.inline-box -->

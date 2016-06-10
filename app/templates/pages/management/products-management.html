@@ -1,11 +1,11 @@
-{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+{% import "partials/components.nunjucks" as components %}
 
 {% include "pages/management/products-management-add.html" %}
 {% include "pages/management/products-management-edit.html" %}
 {% include "pages/management/products-management-view.html" %}
 
 <div id="main-products-management" class="inline-box">
-    {{ add_search_button('add-products-management') }}
+    {{ add_search_button('add-products-management', 'main-products-management') }}
     <!-- /.row -->
     <div class="row table-responsive">
         <div class="col-md-12">
@@ -17,9 +17,9 @@
                     <th>Source</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    <th>Note</th>
                     <th>Actions</th>
                 </tr>
-
                 <tr>
                     <td>01</td>
                     <td>bulb_01</td>
@@ -27,11 +27,11 @@
                     <td>ABC company</td>
                     <td>2.5$</td>
                     <td>839</td>
+                    <td></td>
                     <td>
-                        {{ crud_button_group('view-products-management', 'edit-products-management') }}
+                    {{ crud_button_group('view-products-management', 'edit-products-management', 'main-products-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>02</td>
                     <td>bulb_02</td>
@@ -39,11 +39,11 @@
                     <td>DEF company</td>
                     <td>1$</td>
                     <td>720</td>
+                    <td></td>
                     <td>
-                        {{ crud_button_group('view-products-management', 'edit-products-management') }}
+                    {{ crud_button_group('view-products-management', 'edit-products-management', 'main-products-management') }}
                     </td>
                 </tr>
-
                 <tr>
                     <td>03</td>
                     <td>deco_01</td>
@@ -51,14 +51,14 @@
                     <td>GHI company</td>
                     <td>0.2$</td>
                     <td>1290</td>
+                    <td></td>
                     <td>
-                        {{ crud_button_group('view-products-management', 'edit-products-management') }}
+                    {{ crud_button_group('view-products-management', 'edit-products-management', 'main-products-management') }}
                     </td>
                 </tr>
             </table>
         </div>
     </div>
     <!-- /.row -->
-    {% from "partials/components.nunjucks" import pagination %}
     {{ pagination(3) }}
 </div><!-- /.inline-box -->

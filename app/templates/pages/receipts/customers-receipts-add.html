@@ -1,0 +1,83 @@
+<div id="add-customers-receipts" class="inline-box hidden">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Order</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<form class="form-horizontal">
+				<div class="form-group">
+				  <label class="col-md-3 control-label" for="customers-receipts-name">Name</label>
+				  <div class="col-md-9">
+				    <input type="text" class="form-control" id="customers-receipts-name" placeholder="Name" value="">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="col-md-3 control-label" for="customers-receipts-phone">Phone</label>
+				  <div class="col-md-9">
+				    <input type="text" class="form-control" id="customers-receipts-phone" placeholder="Phone" value="">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="col-md-3 control-label" for="customers-receipts-email">Email</label>
+				  <div class="col-md-9">
+				    <input type="text" class="form-control" id="customers-receipts-email" placeholder="Email" value="">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="col-md-3 control-label" for="customers-receipts-address">Address</label>
+				  <div class="col-md-9">
+				    <input type="text" class="form-control" id="customers-receipts-address" placeholder="Address" value="">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="col-md-3 control-label">Delivery date</label>
+	                <div class="col-md-9">
+	                  <input type="text" class="form-control date-picker" placeholder="Delivery date">
+	                </div>
+                </div>
+				{{ input_form('Total', '') }}
+				{{ input_form('Note', '') }}
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+		  		<label >Choose product to add to list</label>
+		    	<select class="form-control select2" data-placeholder="Choose product" style="width: 100%;">
+		          <option>Led A</option>
+		          <option>Led B</option>
+		          <option>Led C</option>
+		          <option>Led D</option>
+		        </select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		    <table class="table table-bordered table-hover" id="customers-receipts-product-table">
+		    	<tr>
+		    		<th>Product name</th>
+		    		<th>Quantity</th>
+		    		<th>In stock</th>
+		    		<th>Price</th>
+		    		<th>Actions</th>
+		    	</tr>
+		    	<tr>
+		    		<td>Led C</td>
+		    		<td><span data-toggle="popover">100</span></td>
+		    		<td>400</td>
+		    		<td>$500</td>
+		    		<td>
+		    			<div class="btn-group btn-group-sm">
+		    				<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+		    			</div>
+		    		</td>
+		    	</tr>
+		    </table>
+		</div>
+	</div>
+	{{ action_crud_button_group('main-customers-receipts', 'add-customers-receipts') }}
+</div>

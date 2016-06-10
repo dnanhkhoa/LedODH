@@ -1,22 +1,44 @@
-{% from "partials/components.nunjucks" import crud_button_group %}
-<div id="main-customers-receipts" class="inline-box">
-	<div class="row">
+{% import "partials/components.nunjucks" as components %}
 
-	</div>
+{% include "pages/receipts/customers-receipts-add.html" %}
+{% include "pages/receipts/customers-receipts-edit.html" %}
+{% include "pages/receipts/customers-receipts-view.html" %}
+
+<div id="main-customers-receipts" class="inline-box">
+	{{ add_search_button('add-customers-receipts', 'main-customers-receipts') }}
 	<!-- /.row -->
 	<div class="row table-responsive">
 	  <div class="col-md-12">
 	    <table class="table table-bordered table-hover">
-	      <tr>
-	        <th>Name</th>
-	        <th>Phone</th>
-	        <th>Email</th>
-	        <th>Action</th>
-	      </tr>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Email</th>
+				<th>Address</th>
+				<th>Created date</th>
+				<th>Delivery date</th>
+				<th>Total</th>
+				<th>Note</th>
+				<th>Actions</th>
+			</tr>
+			<tr>
+				<td>01</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>00-00-0000</td>
+				<td>00-00-0000</td>
+				<td></td>
+				<td></td>
+				<td>
+				{{ crud_button_group('view-customers-receipts', 'edit-customers-receipts', 'main-customers-receipts') }}
+				</td>
+			</tr>
 	    </table>
 	  </div>
 	</div>
 	<!-- /.row -->
-	{% from "partials/components.nunjucks" import pagination %}
 	{{ pagination(3) }}
 </div><!-- /.inline-box -->

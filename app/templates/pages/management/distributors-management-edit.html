@@ -1,8 +1,7 @@
-{% from "partials/components.nunjucks" import save_back_crud_button_group, back_crud_button_group, input_form %}
 <div id="edit-distributors-management" class="inline-box hidden">
     <div class="row">
         <div class="col-md-12">
-            <h3>Add distributor</h3>
+            <h3>Edit distributor</h3>
         </div>
     </div>
     <div class="row">
@@ -10,10 +9,11 @@
             <form class="form-horizontal">
                 {{ input_form('Name', 'Tuan') }}
                 {{ input_form('Address', '15 Nguyen Van Cu st, District 5') }}
-                {{ input_form('Email', 'tuan@mail.com') }}
+                {{ input_form('Email', 'tuan@gmail.com') }}
                 {{ input_form('Phone', '090333222') }}
+                {{ input_form('Note', '') }}
             </form>
         </div>
     </div>
-    {{ save_back_crud_button_group('main-distributors-management') }}
+    {{ action_crud_button_group('main-distributors-management', 'edit-distributors-management') }}
 </div>

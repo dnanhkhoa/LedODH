@@ -1,41 +1,49 @@
-{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+{% import "partials/components.nunjucks" as components %}
 
-{% include "pages/receipts/distributors-receipts_add.html" %}
-{% include "pages/receipts/distributors-receipts_edit.html" %}
-{% include "pages/receipts/distributors-receipts_view.html" %}
+{% include "pages/receipts/distributors-receipts-add.html" %}
+{% include "pages/receipts/distributors-receipts-edit.html" %}
+{% include "pages/receipts/distributors-receipts-view.html" %}
 
 <div id="main-distributors-receipts" class="inline-box">
-	{{ add_search_button('add-distributors-receipts') }}
+	{{ add_search_button('add-distributors-receipts', 'main-distributors-receipts') }}
 	<!-- /.row -->
 	<div class="row table-responsive">
 	  <div class="col-md-12">
 	    <table class="table table-bordered table-hover">
 			<tr>
 				<th>#</th>
-				<th>Name</th>
-				<th>Store name</th>
-				<th>Phone</th>
-				<th>Email</th>
-				<th>Address</th>
+				<th>Distributor</th>
+				<th>Created date</th>
+				<th>Delivery date</th>
+				<th>Total</th>
 				<th>Note</th>
 				<th>Actions</th>
 			</tr>
 			<tr>
 				<td>01</td>
-				<td>Hoang</td>
-				<td>Hoang Pro</td>
-				<td>0122555666</td>
-				<td>hoang@mail.com</td>
-				<td>222 Dien Bien Phu st, District 10</td>
+				<td>A</td>
+				<td>00-00-0000</td>
+				<td>00-00-0000</td>
+				<td></td>
 				<td></td>
 				<td>
-				{{ crud_button_group('view-distributors-receipts', 'edit-distributors-receipts') }}
+				{{ crud_button_group('view-distributors-receipts', 'edit-distributors-receipts', 'main-distributors-receipts') }}
+				</td>
+			</tr>
+			<tr>
+				<td>02</td>
+				<td>A</td>
+				<td>00-00-0000</td>
+				<td>00-00-0000</td>
+				<td></td>
+				<td></td>
+				<td>
+				{{ crud_button_group('view-distributors-receipts', 'edit-distributors-receipts', 'main-distributors-receipts') }}
 				</td>
 			</tr>
 	    </table>
 	  </div>
 	</div>
 	<!-- /.row -->
-	{% from "partials/components.nunjucks" import pagination %}
 	{{ pagination(3) }}
 </div><!-- /.inline-box -->
