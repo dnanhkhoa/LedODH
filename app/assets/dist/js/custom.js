@@ -24,6 +24,7 @@ $(function () {
 			var view_id = $(e.currentTarget).data('view-id');
 			$('.inline-box').addClass('hidden');
 			$('#' + view_id).removeClass('hidden');
+			console.log(view_id);
 	    return false;
 	});
 
