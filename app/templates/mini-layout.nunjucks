@@ -106,6 +106,8 @@
 <script src="../assets/dist/js/app.js"></script>
 <!-- Custom -->
 <script src="../assets/dist/js/custom.js"></script>
+<script src="../assets/publicScripts/googlechart_loader.js"></script>
+<script src="../assets/publicScripts/public.js"></script>
 <!-- External scripts -->
 <script>
   $(function () {
