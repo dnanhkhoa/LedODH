@@ -3,3 +3,7 @@
     padding: 15px;
     color: #fff;
 }
+
+table .btn-group {
+	display: flex;
+}

@@ -12,8 +12,18 @@ $(function () {
 	$('.inline-page-button').on('click', function (e) {
 			var view_id = $(e.currentTarget).data('view-id');
 			$('.inline-page').addClass('hidden');
+			$("[class~='inline-box']").addClass('hidden');
+			$("[class~='inline-box'][id*=main-]").removeClass('hidden');
 			$('#' + view_id).removeClass('hidden');
-			$("html, body").animate({scrollTop: $('#' + view_id).offset().top}, 200);
+			$("html, body").animate({scrollTop: $('#' + view_id).offset().top - $('header.main-header').height() - 10}, 200);
+	    return false;
+	});
+
+  // Show inline box
+	$('.inline-box-button').on('click', function (e) {
+			var view_id = $(e.currentTarget).data('view-id');
+			$('.inline-box').addClass('hidden');
+			$('#' + view_id).removeClass('hidden');
 	    return false;
 	});
 

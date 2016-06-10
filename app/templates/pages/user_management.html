@@ -1,0 +1,72 @@
+{% from "partials/components.nunjucks" import crud_button_group %}
+{% include "pages/user_management_add.html" %}
+{% include "pages/user_management_view.html" %}
+{% include "pages/user_management_edit.html" %}
+<div id="main-user-management" class="box box-success inline-box">
+  <div class="box-header">
+    <h3 class="box-title">User Management</h3>
+  </div><!-- /.box-header -->
+  <div class="box-body">
+    <div class="row">
+
+    </div>
+    <!-- /.row -->
+    <div class="row table-responsive">
+      <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>Ronald A. Stephens</td>
+            <td>620-368-3087</td>
+            <td>RonaldAStephens@inbound.plus</td>
+            <td>
+            {{ crud_button_group('view-user-management', 'edit-user-management', 'main-user-management') }}
+            </td>
+          </tr>
+          <tr>
+            <td>Evan L. Chambers</td>
+            <td>650-872-7634</td>
+            <td>EvanLChambers@inbound.plus</td>
+            <td>
+            {{ crud_button_group('view-user-management', 'edit-user-management', 'main-user-management') }}
+            </td>
+          </tr>
+          <tr>
+            <td>Fred I. Munoz</td>
+            <td>562-266-0277</td>
+            <td>FredIMunoz@inbound.plus</td>
+            <td>
+            {{ crud_button_group('view-user-management', 'edit-user-management', 'main-user-management') }}
+            </td>
+          </tr>
+          <tr>
+            <td>William L. Copeland</td>
+            <td>530-882-6452</td>
+            <td>WilliamLCopeland@inbound.plus</td>
+            <td>
+            {{ crud_button_group('view-user-management', 'edit-user-management', 'main-user-management') }}
+            </td>
+          </tr>
+          <tr>
+            <td>James T. Johnson</td>
+            <td>334-735-6153</td>
+            <td>JamesTJohnson@inbound.plus</td>
+            <td>
+            {{ crud_button_group('view-user-management', 'edit-user-management', 'main-user-management') }}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div><!-- /.box-body -->
+  <div class="box-footer clearfix">
+    {% from "partials/components.nunjucks" import pagination %}
+    {{ pagination(3) }}
+  </div>
+</div><!-- /.box -->

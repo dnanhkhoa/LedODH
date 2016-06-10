@@ -2,7 +2,7 @@
 
 {% block title %}{{ super() + ' Dashboard' }}{% endblock %}
 
-{% from "partials/inline-page-macro.nunjucks" import dashboard_small_box, inline_page %}
+{% from "partials/components.nunjucks" import inline_page_button, inline_page %}
 
 {% block content_wrapper %}
 
@@ -20,8 +20,10 @@
       </div>
       <div class="box-body">
         <div class="row">
-          {{ dashboard_small_box('statistics', 'Statistics', 'ion ion-stats-bars', 'bg-aqua') }}
-          {{ dashboard_small_box('account_management', 'Accounts', 'ion ion-stats-bars', 'bg-green', 'Create, edit and delete accounts') }}
+          {{ inline_page_button('receipts', 'Receipts', 'ion ion-ios-list', 'bg-aqua') }}
+          {{ inline_page_button('statistics', 'Statistics', 'ion ion-stats-bars', 'bg-green') }}
+          {{ inline_page_button('warehouse', 'Warehouse', 'ion ion-ios-home', 'bg-yellow') }}
+          {{ inline_page_button('management', 'Management', 'ion ion-ios-folder', 'bg-red') }}
         </div>
         <!-- /.row -->
       </div>
@@ -33,8 +35,10 @@
 </div>
 <!-- /.row -->
 
-{# inline_page('pages/hello.nunjucks', 'statistics') #}
-{# inline_page('pages/hello2.nunjucks', 'account_management') #}
+{{ inline_page('pages/receipts/receipts.html', 'receipts') }}
+{{ inline_page('pages/statistics/statistics.html', 'statistics') }}
+{{ inline_page('pages/warehouse/warehouse.html', 'warehouse') }}
+{{ inline_page('pages/management/management.html', 'management') }}
 
 </section>
 <!-- /.content -->

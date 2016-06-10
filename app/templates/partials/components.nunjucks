@@ -1,0 +1,57 @@
+{% macro inline_page_button(view_id, header, icon_class, color = 'bg-aqua', description = '&nbsp;', col_class = 'col-lg-3 col-xs-6') %}
+<div class="{{ col_class | safe }}">
+  <!-- small box -->
+  <a href="#" class="small-box inline-page-button {{ color | safe }}" data-view-id="{{ view_id | safe }}">
+    <div class="inner">
+      <h3>{{ header | safe }}</h3>
+      <p><small>{{ description | safe }}</small></p>
+    </div>
+    <div class="icon">
+      <i class="{{ icon_class | safe }}"></i>
+    </div>
+    <div class="small-box-footer">
+      <i class="fa fa-arrow-circle-right"></i>
+    </div>
+  </a>
+</div>
+<!-- ./col -->
+{% endmacro %}
+
+{% macro inline_page(page_link, view_id) %}
+<div id="{{ view_id | safe }}" class="row inline-page hidden">
+  <div class="col-md-12">
+    {% include page_link %}
+  </div>
+  <!-- /.col-md-12"-->
+</div>
+<!-- /.row -->
+{% endmacro %}
+
+{% macro inline_box(page_link, view_id, box_title) %}
+<div id="{{ view_id | safe }}" class="box box-success inline-box">
+  <div class="box-header">
+    <h3 class="box-title">{{ box_title | safe }}</h3>
+  </div><!-- /.box-header -->
+  <div class="box-body">
+    {% include page_link %}
+  </div><!-- /.box-body -->
+</div>
+{% endmacro %}
+
+{% macro crud_button_group(view_info_id, view_edit_id) %}
+<div class="btn-group btn-group-sm">
+  <a href="#" class="btn btn-primary inline-box-button" data-view-id="{{ view_info_id | safe }}"><span class="glyphicon glyphicon-info-sign"></span></a>
+  <a href="#" class="btn btn-warning inline-box-button" data-view-id="{{ view_edit_id | safe }}"><span class="glyphicon glyphicon-pencil"></span></a>
+  <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+</div>
+{% endmacro %}
+
+{% macro pagination(num_page = 3) %}
+<ul class="pagination pagination-sm no-margin pull-right">
+  <li><a href="#">&laquo;</a></li>
+  {% for i in range(0, num_page) -%}
+  <li><a href="#">{{ i + 1 }}</a></li>
+  {%- endfor %}
+  <li><a href="#">&raquo;</a></li>
+</ul>
+{% endmacro %}
