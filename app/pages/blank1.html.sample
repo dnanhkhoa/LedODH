@@ -1,7 +1,0 @@
-{% extends "layout.nunjucks" %}
-
-{% block content %}
-
-<!-- Code here -->
-
-{% endblock %}

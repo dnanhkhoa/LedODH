@@ -10,11 +10,11 @@
 
   <header class="main-header">
     <a href="#" class="logo">
-      <span class="logo-lg"><b>{{ company_name }}</b></span>
+      <span class="logo-lg"><b>{{ company_name | safe }}</b></span>
     </a>
     <nav class="navbar navbar-static-top">
-      <a href="#" class="nav-scroll-top">
-        <i class="fa fa-chevron-up"></i>
+      <a href="#" class="sidebar-toggle nav-scroll-top">
+        <span class="sr-only"></span>
       </a>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
