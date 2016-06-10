@@ -1,0 +1,22 @@
+<div id="statistics_revenue" class="box box-success inline-box hidden">
+    <h3>Statistics - revenue</h3>
+
+    <a href="#" class="btn btn-default inline-box-button" data-view-id="main-statistics">Back</a>
+
+    <div class="nav-tabs-custom">
+        <!-- Tabs within a box -->
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#statistics_revenue_yearly" data-toggle="tab">Yearly</a></li>
+            <li><a href="#" data-toggle="tab">Quarterly</a></li>
+            <li><a href="#" data-toggle="tab">Monthly</a></li>
+            <li><a href="#" data-toggle="tab">Daily</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="chart tab-pane active" id="pane-statistics_revenue_yearly">{% include "pages/statistics/statistics_revenue_yearly.html" %}</div>
+            <div class="chart tab-pane" id="pane-statistics-revenue-quarterly"></div>
+            <div class="chart tab-pane" id="pane-statistics-revenue-monthly"></div>
+            <div class="chart tab-pane" id="pane-statistics-revenue-daily"></div>
+        </div>
+    </div>
+</div>

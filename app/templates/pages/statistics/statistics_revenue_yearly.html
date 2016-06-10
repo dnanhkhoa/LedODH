@@ -1,0 +1,178 @@
+<script src="../assets/publicScripts/public.js"></script>
+
+<style>
+    a.btnChart
+    {
+        width: 50px;
+        height: 35px;
+    }
+
+    a.btnChart > img
+    {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+
+<div>
+    <h4>General statistics</h4>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Year</th>
+            <th>Sales</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>2013</td>
+            <td>12000</td>
+        </tr>
+
+        <tr>
+            <td>2014</td>
+            <td>16000</td>
+        </tr>
+
+        <tr>
+            <td>2015</td>
+            <td>15600</td>
+        </tr>
+
+        <tr>
+            <td>2016</td>
+            <td>18000</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div style="padding-left: 20px">
+        <h5>Chart</h5>
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_BasicChart', '')">
+            X
+        </a>
+
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_BasicChart', 'statistics_revenue_yearly_basic_linechart.html')">
+            <img src="..\assets\charts\line.png"/>
+        </a>
+
+        <iframe id="ifr_BasicChart" frameborder="0" style="width: 100%; height: 400px; display: none;">
+
+        </iframe>
+    </div>
+</div>
+
+
+<div>
+    <h4>Top customers</h4>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Income</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>01</td>
+            <td>ABC</td>
+            <td>10000$</td>
+        </tr>
+
+        <tr>
+            <td>02</td>
+            <td>DEF</td>
+            <td>9700$</td>
+        </tr>
+
+        <tr>
+            <td>03</td>
+            <td>GHI</td>
+            <td>6000$</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div style="padding-left: 20px">
+        <h5>Chart</h5>
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_CustomerChart', '')">
+            X
+        </a>
+
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_CustomerChart', 'statistics_revenue_yearly_customer_columnchart.html')">
+            <img src="../assets/charts/column.png"/>
+        </a>
+
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_CustomerChart', 'statistics_revenue_yearly_customer_donutchart.html')">
+            <img src="../assets/charts/donut.png"/>
+        </a>
+
+        <iframe id="ifr_CustomerChart" style="width: 100%; display: none; height: 450px;">
+
+        </iframe>
+    </div>
+</div>
+
+
+
+<div>
+    <h4>Top products</h4>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Income</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>01</td>
+            <td>Led01</td>
+            <td>Bulb led</td>
+            <td>20$</td>
+            <td>170</td>
+            <td>3400$</td>
+        </tr>
+
+        <tr>
+            <td>02</td>
+            <td>Led02</td>
+            <td>Lamp led</td>
+            <td>15$</td>
+            <td>120</td>
+            <td>3300$</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div style="padding-left: 20px">
+        <h5>Chart</h5>
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_ProductChart', '')">
+            X
+        </a>
+
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_ProductChart', 'statistics_revenue_yearly_customer_columnchart.html')">
+            <img src="..\assets\charts\line.png"/>
+        </a>
+
+        <a class="btn btn-default btnChart" onclick="setChartPage('ifr_ProductChart', 'statistics_revenue_yearly_customer_donutchart.html')">
+            <img src="..\assets\charts\donut.png"/>
+        </a>
+
+        <iframe id="ifr_ProductChart" style="width: 100%; display: none; height: 450px;">
+
+        </iframe>
+    </div>
+</div>
