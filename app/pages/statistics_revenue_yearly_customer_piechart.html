@@ -10,33 +10,22 @@
 
             function drawChart() {
                 var data = google.visualization.arrayToDataTable([
-                    ['Year', 'Vinaled', 'Amas', 'FSO'],
-                    ['2014',  5500,  7200, 4000],
-                    ['2015',  7800,  6500, 5500],
-                    ['2016',  12000, 9700, 6000]
+                    ['Company', 'Sales'],
+                    ['Vinaled',  12000],
+                    ['Amas',     9700],
+                    ['FSO',      6000],
                 ]);
 
                 var options = {
-                    title: 'Top customers',
-                    animation: {
-                        duration: 1000,
-                        easing: 'out',
-                        startup: true
-                    },
-                    legend: { position: 'bottom' },
-                    vAxis: {title: 'Sales ($)'},
-                    hAxis: {title: 'Years'}
+                    title: 'Sales per customer this year'
                 };
 
-                var options2 = jQuery.extend(true, {}, options);
-                options2.animation.duration = 0;
 
-
-                var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 
 
                 function resizeHandler () {
-                    chart.draw(data, options2);
+                    chart.draw(data, options);
                 }
 
 
@@ -53,4 +42,4 @@
     </div>
 </div>
 
-<div id="chart_div" style="max-width: 600px;"></div>
+<div id="chart_div" style="max-width: 800px;"></div>
