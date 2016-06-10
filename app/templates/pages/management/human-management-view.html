@@ -1,1 +1,21 @@
-view
+{% from "partials/components.nunjucks" import save_back_crud_button_group, back_crud_button_group, input_form %}
+<div id="view-human-management" class="inline-box hidden">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Add human</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal">
+                {{ input_form('ID', 'Man01') }}
+                {{ input_form('Name', 'Mr. Boss') }}
+                {{ input_form('Phone', '090000000') }}
+                {{ input_form('Address', '227 Le Van Viet st, District Thu Duc') }}
+                {{ input_form('Role', 'Admin') }}
+                {{ input_form('Note', '') }}
+            </form>
+        </div>
+    </div>
+    {{ save_back_crud_button_group('main-human-management') }}
+</div>
