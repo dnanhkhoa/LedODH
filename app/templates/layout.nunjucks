@@ -12,12 +12,14 @@
     <a href="#" class="logo">
       <span class="logo-lg"><b>{{ company_name }}</b></span>
     </a>
-
     <nav class="navbar navbar-static-top">
+      <a href="#" class="nav-scroll-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li class="user user-menu">
-            <a href="#">
+            <a href="dashboard.html">
               <img src="../assets/dist/img/avatar.png" class="user-image" alt="User Image">
               <span>{{ username | safe }}</span>
             </a>
@@ -34,7 +36,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    {% block content %}{% endblock %}
+    {% block content_wrapper %}{% endblock %}
   </div>
   <!-- /.content-wrapper -->
 
