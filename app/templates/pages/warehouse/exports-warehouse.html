@@ -1,1 +1,118 @@
-1
+{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+
+{% include "pages/warehouse/exports-warehouse-add.html" %}
+{% include "pages/warehouse/exports-warehouse-edit.html" %}
+{% include "pages/warehouse/exports-warehouse-view.html" %}
+
+<div id="main-distributors-management" class="inline-box">
+    {{ add_search_button('add-products-management') }}
+    <!-- /.row -->
+    <div class="row table-responsive">
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>#</th>
+                    <th>Customer</th>
+                    <th>Date created</th>
+                    <th>Date exported</th>
+                    <th>Total income</th>
+                    <th>Actions</th>
+                </tr>
+
+                <tr>
+                    <td>001</td>
+                    <td>HaledCo</td>
+                    <td>12/3/16</td>
+                    <td>13/3/16</td>
+                    <td>75000000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>FTel</td>
+                    <td>7/4/16</td>
+                    <td>7/4/16</td>
+                    <td>67000000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>VnComp</td>
+                    <td>8/4/16</td>
+                    <td>9/4/16</td>
+                    <td>82000000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Domestic</td>
+                    <td>16/4/16</td>
+                    <td>20/4/16</td>
+                    <td>12000000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>ASAMLed</td>
+                    <td>30/4/16</td>
+                    <td>2/5/16</td>
+                    <td>89500000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>OKET</td>
+                    <td>7/5/16</td>
+                    <td>9/5/16</td>
+                    <td>59000000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>007</td>
+                    <td>VnCompact</td>
+                    <td>12/5/16</td>
+                    <td>13/5/16</td>
+                    <td>82000000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>008</td>
+                    <td>ASAMLed</td>
+                    <td>27/5/16</td>
+                    <td>28/5/16</td>
+                    <td>36000000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>009</td>
+                    <td>FTel</td>
+                    <td>1/6/16</td>
+                    <td>1/6/16</td>
+                    <td>53000000</td>
+                    <td>
+                        {{ crud_button_group('view-exports-warehouse', 'edit-exports-warehouse') }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- /.row -->
+    {% from "partials/components.nunjucks" import pagination %}
+    {{ pagination(3) }}
+</div><!-- /.inline-box -->
