@@ -5,7 +5,7 @@
 {% include "pages/warehouse/exports-warehouse-view.html" %}
 
 <div id="main-exports-warehouse" class="inline-box">
-    {{ add_search_button('add-products-management') }}
+    {{ add_search_button('add-exports-warehouse') }}
     <!-- /.row -->
     <div class="row table-responsive">
         <div class="col-md-12">
@@ -113,6 +113,5 @@
         </div>
     </div>
     <!-- /.row -->
-    {% from "partials/components.nunjucks" import pagination %}
     {{ pagination(3) }}
 </div><!-- /.inline-box -->

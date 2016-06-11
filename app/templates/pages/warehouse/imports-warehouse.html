@@ -1,11 +1,11 @@
-{% from "partials/components.nunjucks" import crud_button_group, add_search_button %}
+{% import "partials/components.nunjucks" as components %}
 
 {% include "pages/warehouse/imports-warehouse-add.html" %}
 {% include "pages/warehouse/imports-warehouse-edit.html" %}
 {% include "pages/warehouse/imports-warehouse-view.html" %}
 
-<div id="main-distributors-management" class="inline-box">
-    {{ add_search_button('add-products-management') }}
+<div id="main-imports-warehouse" class="inline-box">
+    {{ add_search_button('add-imports-warehouse') }}
     <!-- /.row -->
     <div class="row table-responsive">
         <div class="col-md-12">
@@ -113,6 +113,5 @@
         </div>
     </div>
     <!-- /.row -->
-    {% from "partials/components.nunjucks" import pagination %}
     {{ pagination(3) }}
 </div><!-- /.inline-box -->
