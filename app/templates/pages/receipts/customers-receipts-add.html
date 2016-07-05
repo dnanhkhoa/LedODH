@@ -55,6 +55,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="row">
 		<div class="col-md-12">
 		    <table class="table table-bordered table-hover" id="customers-receipts-product-table">
@@ -72,12 +73,87 @@
 		    		<td>$500</td>
 		    		<td>
 		    			<div class="btn-group btn-group-sm">
-		    				<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+		    				<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-check"></span></a>
 		    			</div>
 		    		</td>
 		    	</tr>
 		    </table>
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Selected products</h4>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-bordered table-hover">
+				<tr>
+					<th>Product name</th>
+					<th>Quantity</th>
+					<th>In stock</th>
+					<th>Price</th>
+					<th>Actions</th>
+				</tr>
+
+				<tr>
+					<td>Led A</td>
+					<td><span data-toggle="popover">50</span></td>
+					<td>400</td>
+					<td>$500</td>
+					<td>
+						<div class="btn-group btn-group-sm">
+							<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Led C</td>
+					<td><span data-toggle="popover">80</span></td>
+					<td>400</td>
+					<td>$500</td>
+					<td>
+						<div class="btn-group btn-group-sm">
+							<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Led D</td>
+					<td><span data-toggle="popover">100</span></td>
+					<td>400</td>
+					<td>$500</td>
+					<td>
+						<div class="btn-group btn-group-sm">
+							<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Led B</td>
+					<td><span data-toggle="popover">100</span></td>
+					<td>400</td>
+					<td>$500</td>
+					<td>
+						<div class="btn-group btn-group-sm">
+							<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>TOTAL</td>
+					<td><span data-toggle="popover">330</span></td>
+					<td>1600</td>
+					<td>$2000</td>
+					<td>
+
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
 	{{ action_crud_button_group('main-customers-receipts', 'add-customers-receipts') }}
 </div>
